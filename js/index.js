@@ -1,7 +1,7 @@
 const leadData = () => {
   fetch("https://openapi.programming-hero.com/api/ai/tools")
     .then((res) => res.json())
-    .then((data) => showData(data.data.tools.slice(0,6)));
+    .then((data) => showData(data.data.tools.slice(0, 6)));
 };
 
 const showData = (data) => {
@@ -29,7 +29,7 @@ const showData = (data) => {
            </div>
            </div>
            <div class="card-actions">
-           <i class="fa-solid fa-arrow-right" onclick="loadSingelData('${singelData.id}')"></i>
+           <i class="fa-solid fa-arrow-right" onclick="my_modal_1.showModal()" ></i>
            </div>
            </div>
          </div>
@@ -37,24 +37,24 @@ const showData = (data) => {
         `;
   });
 };
+{/* <i class="fa-solid fa-arrow-right" onclick="loadSingelData('${singelData.id}')"></i> */}
 
-const seeMOre = () =>{
-    fetch("https://openapi.programming-hero.com/api/ai/tools")
+const seeMOre = () => {
+  fetch("https://openapi.programming-hero.com/api/ai/tools")
     .then((res) => res.json())
     .then((data) => showData(data.data.tools));
+};
 
-}
+const loadSingelData = (id) => {
 
-const loadSingelData = (id) =>{
-  const url = ` https://openapi.programming-hero.com/api/ai/tool/${id}`
+  const url = ` https://openapi.programming-hero.com/api/ai/tool/${id}`;
   fetch(url)
-  .then(res => res.json())
-  .then(data => showSingelData(data.data))
+    .then((res) => res.json())
+    .then((data) => showSingelData(data.data));
+};
 
-}
-
-const showSingelData = (data) =>{
+const showSingelData = (data) => {
   console.log(data)
-
-}
+ 
+};
 leadData();

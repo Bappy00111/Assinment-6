@@ -11,7 +11,9 @@
     <!-- font awasome  -->
     <script src="https://kit.fontawesome.com/38772ff4a1.js" crossorigin="anonymous"></script>
 </head>
+
 </html>
+
 <body>
     <!-- header  -->
     <header class="text-center">
@@ -25,15 +27,29 @@
 
             </section>
         </div>
-       <div class="text-center">
-        <button onclick="seeMOre()" class="btn btn-active bg-red-500 mt-4 ">Secondary</button>
-       </div>
+        <div class="text-center">
+            <button onclick="seeMOre()" class="btn btn-active bg-red-500 mt-4 ">Secondary</button>
+        </div>
 
-       <!-- modal start  -->
-        
+        <!-- modal start  -->
+        <!-- Open the modal using ID.showModal() method -->
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+        <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </div>
+            </form>
+        </dialog>
+
 
     </main>
-   
+
     <!-- javascript  -->
     <script src="/js/index.js"></script>
 </body>
